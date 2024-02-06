@@ -7,7 +7,7 @@ runs:
   steps:
     - uses: actions/setup-dotnet@v3
       with:
-        global-json-file: '8.0.x'
+        version: '8.0.x'
 
     - uses: actions/cache@v3
       with:
