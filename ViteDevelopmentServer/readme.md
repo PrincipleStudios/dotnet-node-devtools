@@ -20,11 +20,10 @@ Usage:
 
 ```csharp
 app.UseSpa(spa => {
-    spa.Options.SourcePath = "./path-to-react-source";
-
 #if DEBUG
     if (env.IsDevelopment())
     {
+        spa.Options.SourcePath = "./path-to-react-source";
         spa.UseViteDevelopmentServer(
             // The bin path to run to launch the server from the SourcePath.
             // This is typically "node_modules/.bin/vite", but if you wrap Vite
