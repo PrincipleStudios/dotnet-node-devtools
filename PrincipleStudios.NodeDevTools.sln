@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViteDevelopmentServer.Test"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViteDevelopmentServer.Demo", "ViteDevelopmentServer.Demo\ViteDevelopmentServer.Demo.csproj", "{5F84DBF6-C2A6-495F-A5D5-5C75577E1C6E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BB97384-E3F9-4DEE-A998-BC9B96A65F90}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2659B23E-222F-4FE2-9424-023FD0C2A9C3}
 	EndGlobalSection
 EndGlobal
