@@ -12,7 +12,7 @@ builds:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="PrincipleStudios.NodeDevTools" Version="0.1.0" Condition=" '$(Configuration)' == 'Debug' " />
+    <PackageReference Include="PrincipleStudios.ViteDevelopmentServer" Version="0.1.0" Condition=" '$(Configuration)' == 'Debug' " />
   </ItemGroup>
 ```
 
