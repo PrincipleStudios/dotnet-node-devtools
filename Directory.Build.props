@@ -40,6 +40,7 @@
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<PackageIcon>logo_black_small.png</PackageIcon>
 		<Copyright>2024 Principle Studios</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<ItemGroup>
