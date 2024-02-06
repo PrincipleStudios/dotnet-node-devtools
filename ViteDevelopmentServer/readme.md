@@ -1,6 +1,20 @@
 # PrincipleStudios.ViteDevelopmentServer
 
-A Vite development server for use with .NET Spa Services.
+A Vite development server for use with .NET Spa Services. This works very
+similarly to the `UseReactDevelopmentServer` middleware provided by the .NET Spa
+Services project.
+
+_Note:_ This server is intended for development purposes only; it is not
+optimized for production.
+
+Add your project reference to your csproj; be sure to exclude it for release
+builds:
+
+```xml
+  <ItemGroup>
+    <PackageReference Include="PrincipleStudios.NodeDevTools" Version="0.1.0" Condition=" '$(Configuration)' == 'Debug' " />
+  </ItemGroup>
+```
 
 Usage:
 
@@ -24,3 +38,5 @@ app.UseSpa(spa => {
 #endif
 });
 ```
+
+See the demo project for more details.
