@@ -54,7 +54,7 @@ internal sealed class NodeScriptRunner : IDisposable
 			RedirectStandardInput = true,
 			RedirectStandardOutput = true,
 			RedirectStandardError = true,
-			WorkingDirectory = workingDirectory,
+			WorkingDirectory = Path.GetFullPath(workingDirectory, Directory.GetCurrentDirectory()),
 		};
 
 		if (envVars != null)

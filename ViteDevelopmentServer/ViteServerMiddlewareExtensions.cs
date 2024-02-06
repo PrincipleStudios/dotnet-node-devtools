@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.SpaServices;
+using PrincipleStudios.ViteDevelopmentServer;
 
-namespace PrincipleStudios.ViteDevelopmentServer;
+namespace Microsoft.AspNetCore.Builder;
 
 /// <summary>
 /// Extension methods for enabling Vite development server middleware support.
