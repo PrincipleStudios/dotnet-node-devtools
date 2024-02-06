@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<IsPackable>true</IsPackable>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Version>0.1.0</Version>
+		<VersionPrefix>0.1.0</VersionPrefix>
 		<RootNamespace>PrincipleStudios.ViteDevelopmentServer</RootNamespace>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 
