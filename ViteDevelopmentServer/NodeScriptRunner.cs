@@ -35,7 +35,9 @@ internal sealed class NodeScriptRunner : IDisposable
 			throw new ArgumentException("Cannot be null or empty.", nameof(command));
 		}
 
-		var exeToRun = command;
+		var fullWorkingDirectory = Path.GetFullPath(workingDirectory, Directory.GetCurrentDirectory());
+		var fullPathToCommand = Path.GetFullPath(command, fullWorkingDirectory);
+		var exeToRun = fullPathToCommand;
 		var completeArguments = arguments;
 		if (OperatingSystem.IsWindows())
 		{
@@ -44,7 +46,7 @@ internal sealed class NodeScriptRunner : IDisposable
 			// it prevents capturing stdio). So we need to invoke it via "cmd /c".
 			exeToRun = "cmd";
 			// Cmd also does not auto-adjust forward-slashes to Window's backslashes.
-			completeArguments = $"/c {command.Replace('/', '\\')} {completeArguments}";
+			completeArguments = $"/c \"{fullPathToCommand.Replace('/', '\\')}\" {completeArguments}";
 		}
 
 		var processStartInfo = new ProcessStartInfo(exeToRun)
@@ -54,7 +56,7 @@ internal sealed class NodeScriptRunner : IDisposable
 			RedirectStandardInput = true,
 			RedirectStandardOutput = true,
 			RedirectStandardError = true,
-			WorkingDirectory = Path.GetFullPath(workingDirectory, Directory.GetCurrentDirectory()),
+			WorkingDirectory = fullWorkingDirectory,
 		};
 
 		if (envVars != null)
